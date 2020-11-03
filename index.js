@@ -17,6 +17,11 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 18;
+
+if(votingAge >= 18) {
+  console.log(true);
+} 
 
 
 
@@ -31,8 +36,13 @@ Do the following:
    HINT: no function required
 */
 
+let a = 2;
+let b = 1;
 
-
+if ( a !== b ) {
+   a = b;
+   console.log(a);
+}
 
 
 /*
@@ -46,6 +56,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+let str = "1999";
+let num = Number(str);
+console.log(num);
+// return num;
 
 
 
@@ -58,11 +72,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a * b;
   }
 
-
+multiply(2,3);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -74,10 +88,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(years){
+  const dogAge = 7;
+  return years * dogAge;
 }
 
+dogYears(2);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,9 +123,36 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+
+    if (age >= 1) {
+      if(weight <= 5) {
+      
+        return weight * 0.05;
+      } else if( weight >= 6 && weight <=10) {
+        return weight * 0.04;
+     
+      } else if(weight >= 11 && weight <= 15) {
+        return weight * 0.03;
+      } else if (weight > 15) {
+        return weight * 0.02;
+      }
+    } else {
+
+        if(age > 2/12 && age < 4/12) {
+          return weight * 0.10
+        } else if(age > 4/12 && age <7/12) {
+          return eight * 0.05;
+        } else if(age > 7/12 && age < 1) {
+          return weight * 0.04;
+        }
+
+    }
+
+
   }
+
+  hungryDog(15,1);
 
 
 
@@ -132,10 +175,28 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(user, computer){
-    /*add your code here*/
+let randomComputerChoice = Math.floor(Math.random() * 3);
+let computerChoice;
+if(randomComputerChoice === 0){
+  computerChoice = 'paper';
+}else if(randomComputerChoice === 1){
+  computerChoice = 'rock';
+}else{
+  computerChoice = 'paper';
 }
-  
+
+function game(user, computerChoice){
+
+  if((user === 'scissors' && computerChoice === 'paper') || (user === 'paper' && computerChoice === 'rock') || (user === 'rock' && computerChoice === 'scissors')){
+    return 'you win!'
+  }else if((user === 'scissors' && computerChoice === 'rock') || (user === 'paper' && computerChoice === 'scissors') || (user === 'rock' && computerChoice === 'paper')){
+    return 'you lose!'
+  }else if(user === computerChoice){
+    return "it's a tie"
+  }
+}
+game('paper')
+
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -149,10 +210,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilo){
+    let miles = 0.621371;
+    return kilo * miles;
   }
-
+miles(5);
 
 
 //Task 5b - Feet to CM
@@ -163,9 +225,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function feet(cm){
+  return cm /30.48;
+}
+
+  feet(5);
  
 
 
