@@ -138,7 +138,6 @@ function hungryDog(weight, age){
         return weight * 0.02;
       }
     } else {
-
         if(age > 2/12 && age < 4/12) {
           return weight * 0.10
         } else if(age > 4/12 && age <7/12) {
@@ -146,10 +145,7 @@ function hungryDog(weight, age){
         } else if(age > 7/12 && age < 1) {
           return weight * 0.04;
         }
-
     }
-
-
   }
 
   hungryDog(15,1);
@@ -228,7 +224,6 @@ Using the feet function below do the following:
 function feet(cm){
   return cm /30.48;
 }
-
   feet(5);
  
 
@@ -243,9 +238,17 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(numBottles){
+  while (numBottles > 0){
+     return  `${numBottles} bottles of soda on the wall, ${numBottles} bottles of soda, take one down pass it around ${numBottles - 1} bottles of soda on the wall`;
+     numBottles--;
+  if (numBottles === 0){
+    break;
+    }
   }
+}
+
+  console.log(annoyingSong(10));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -263,11 +266,21 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(score){
+    if(score >= 90 && score <=100) {
+      return 'you got a A';
+    } else if( score >=80 && score <=89){
+      return 'you got a B';
+    } else if(score >=70 && score <=79) {
+      return 'you got a C';
+    }else if(score >=60 && score <=69) {
+      return 'you got a D';
+    } else if(score < 60){
+      return 'you got a F';
+    }
   }
   
-  
+  grade(50);
   
   
 
