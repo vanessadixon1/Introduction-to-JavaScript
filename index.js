@@ -127,12 +127,12 @@ function hungryDog(weight, age){
 
     if (age >= 1) {
       if(weight <= 5) {
-        // console.log(weight * 0.05);
+      
         return weight * 0.05;
-      } else if( weight <= 6 && weight <=10) {
+      } else if( weight >= 6 && weight <=10) {
         return weight * 0.04;
      
-      } else if(weight <= 15) {
+      } else if(weight >= 11 && weight <= 15) {
         return weight * 0.03;
       } else if (weight > 15) {
         return weight * 0.02;
