@@ -297,10 +297,22 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(str) {
+
+  let casea = str.toLowerCase();
+  let vows = ['a','e','i','o','u'];
+  let vowCount = 0;
+  for (let i = 0; i < casea.length; i++) {
+    if(vows.includes(casea[i])) {
+     vowCount++;
+    }
+
+  }
+  return vowCount;
+
 }
 
+console.log(vowelCounter("vanessa"))
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
@@ -309,14 +321,14 @@ function foo(){
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+// export default{
+//     foo,
+//     multiply,
+//     dogYears,
+//     hungryDog,
+//     game,
+//     miles,
+//     feet,
+//     annoyingSong,
+//     grade
+// }
